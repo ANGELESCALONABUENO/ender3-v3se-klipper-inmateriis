@@ -31,6 +31,7 @@ Configuracion productiva para Ender 3 V3 SE con enfoque en operacion diaria:
 2. Integracion con Job Queue de Moonraker.
 3. Sync de carrete activo desde Spoolman a Moonraker/Klipper.
 4. Watchdog: pausa impresion cuando `remaining_g` cae por debajo del umbral.
+5. Macro de destrabe CR/BLTouch integrada: `DESTRABAR_BLTOUCH`.
 
 ## Extrusor CAD y referencia visual
 
@@ -49,6 +50,22 @@ Este setup depende de un fork para soporte `prtouch` en Ender 3 V3 SE:
 - `https://github.com/0xD34D/klipper_ender3_v3_se`
 
 Si migras a Klipper oficial, valida primero compatibilidad de `prtouch` y macros asociadas.
+
+## Macro DESTRABAR_BLTOUCH
+
+- Archivo: `config/macros/DESTRABAR_BLTOUCH.cfg`
+- Origen: `https://github.com/ANGELESCALONABUENO/ender3-v3se-crtouch-destrabe-macro`
+- Uso rapido:
+
+```gcode
+DESTRABAR_BLTOUCH
+```
+
+Con parametros:
+
+```gcode
+DESTRABAR_BLTOUCH TARGET=200 CYCLES=40 AMP=8 FEED=900
+```
 
 ## Instalacion rapida (referencia)
 
