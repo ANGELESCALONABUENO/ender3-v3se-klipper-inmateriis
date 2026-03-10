@@ -73,6 +73,7 @@ Ver `sync_lane0/cron_example.txt`.
 - Guia de contribucion: `CONTRIBUTING.md`
 - Plantilla de PR: `.github/pull_request_template.md`
 - Plantillas de issues: `.github/ISSUE_TEMPLATE/`
+- Orca machine g-code recomendado: `docs/orca-machine-gcode.md`
 
 ## Licencia
 
