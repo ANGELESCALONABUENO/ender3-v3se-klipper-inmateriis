@@ -57,6 +57,13 @@ Ver `sync_lane0/cron_example.txt`.
 - Revisa `position_min/max`, `max_temp`, `max_velocity` y valores PID antes de usar en otra impresora.
 - No aplicar este perfil sin recalibrar `z_offset`, mesh y temperaturas para tu hardware.
 
+## Proyecto y colaboracion
+
+- Changelog: `CHANGELOG.md`
+- Guia de contribucion: `CONTRIBUTING.md`
+- Plantilla de PR: `.github/pull_request_template.md`
+- Plantillas de issues: `.github/ISSUE_TEMPLATE/`
+
 ## Licencia
 
 MIT. Ver archivo `LICENSE`.
