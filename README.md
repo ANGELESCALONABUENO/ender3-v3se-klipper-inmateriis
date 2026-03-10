@@ -1,27 +1,62 @@
 # Ender 3 V3 SE - Klipper Config (Inmateriis)
 
-Configuracion real de una Ender 3 V3 SE con:
+Configuracion productiva para Ender 3 V3 SE con enfoque en operacion diaria:
 
-- Klipper (fork con soporte `prtouch`)
-- Macros separadas por modulos
-- Integracion Spoolman + Moonraker
-- Watchdog de filamento por gramos restantes (pausa automatica)
+- Fork de Klipper con soporte `prtouch` (load-cell/sensor de presion de punta)
+- Macros modulares (`start`, `end`, `queue`, utilidades)
+- Integracion Moonraker + Spoolman
+- Filament watchdog por gramos restantes (pausa automatica por stock bajo)
 
-## Estructura
+## Stack
 
-- `config/printer.cfg`: Config principal de Klipper
-- `config/macros/`: Macros operativas (start/end, queue, spoolman bridge)
-- `config/v3se-config/`: Configs de `prtouch` y sensor de filamento
-- `sync_lane0/`: Script y docs para sincronizar lane0 desde Spoolman
+- Printer: Creality Ender 3 V3 SE
+- Host: MainsailOS + Moonraker
+- Slicer: OrcaSlicer
+- Material backend: Spoolman
 
-## Nota importante
+## Estructura del repo
 
-Este setup usa un fork de Klipper para soporte de `prtouch` en Ender 3 V3 SE.
+- `config/printer.cfg`
+	- Config core de Klipper (hardware, limites, includes)
+- `config/macros/`
+	- Macros operativas y de automatizacion
+- `config/v3se-config/`
+	- Bloques especificos V3 SE (`prtouch`, sensor de filamento)
+- `sync_lane0/`
+	- Script de sincronizacion lane0 + docs + cron example
+
+## Caracteristicas clave
+
+1. Start/End print simplificado y mantenible.
+2. Integracion con Job Queue de Moonraker.
+3. Sync de carrete activo desde Spoolman a Moonraker/Klipper.
+4. Watchdog: pausa impresion cuando `remaining_g` cae por debajo del umbral.
+
+## Fork de Klipper en uso
+
+Este setup depende de un fork para soporte `prtouch` en Ender 3 V3 SE:
+
+- `https://github.com/0xD34D/klipper_ender3_v3_se`
+
+Si migras a Klipper oficial, valida primero compatibilidad de `prtouch` y macros asociadas.
+
+## Instalacion rapida (referencia)
+
+1. Copiar `config/` a tu carpeta de configuracion de Klipper.
+2. Verificar includes en `printer.cfg`.
+3. Ajustar offsets, malla y limites segun tu maquina.
+4. Configurar `sync_lane0/` y cron para refresco de datos Spoolman.
+5. Reiniciar Klipper y validar macros en consola.
 
 ## Automatizacion de sync
 
-Ejemplo cron en `sync_lane0/cron_example.txt`.
+Ver `sync_lane0/cron_example.txt`.
+
+## Seguridad y ajustes
+
+- Revisa `position_min/max`, `max_temp`, `max_velocity` y valores PID antes de usar en otra impresora.
+- No aplicar este perfil sin recalibrar `z_offset`, mesh y temperaturas para tu hardware.
 
 ## Licencia
 
-Uso educativo y de referencia. Ajusta offsets, temperaturas y limites para tu maquina.
+MIT. Ver archivo `LICENSE`.
