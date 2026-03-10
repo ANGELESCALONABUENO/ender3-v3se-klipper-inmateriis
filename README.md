@@ -32,6 +32,16 @@ Configuracion productiva para Ender 3 V3 SE con enfoque en operacion diaria:
 3. Sync de carrete activo desde Spoolman a Moonraker/Klipper.
 4. Watchdog: pausa impresion cuando `remaining_g` cae por debajo del umbral.
 
+## Extrusor CAD y referencia visual
+
+- Link Cults (modelo CAD del extrusor): `PENDIENTE_URL_CULTS`
+
+### Galeria
+
+![Extrusor CAD 1](docs/images/extruder-cad-01.png)
+![Extrusor CAD 2](docs/images/extruder-cad-02.png)
+![Extrusor real](docs/images/extruder-real-01.jpeg)
+
 ## Fork de Klipper en uso
 
 Este setup depende de un fork para soporte `prtouch` en Ender 3 V3 SE:
