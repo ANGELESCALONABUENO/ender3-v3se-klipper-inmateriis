@@ -1,0 +1,2 @@
+@reboot /home/pi/sync_lane0/sync_lane0_from_spoolman.sh >> /home/pi/printer_data/logs/lane0-sync-cron.log 2>&1
+* * * * * /home/pi/sync_lane0/sync_lane0_from_spoolman.sh >> /home/pi/printer_data/logs/lane0-sync-cron.log 2>&1
