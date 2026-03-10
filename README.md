@@ -34,7 +34,7 @@ Configuracion productiva para Ender 3 V3 SE con enfoque en operacion diaria:
 
 ## Extrusor CAD y referencia visual
 
-- Link Cults (modelo CAD del extrusor): `PENDIENTE_URL_CULTS`
+- Link Cults (modelo CAD del extrusor): https://cults3d.com/es/modelo-3d/herramientas/ender-3v3-se-head-cad
 
 ### Galeria
 
