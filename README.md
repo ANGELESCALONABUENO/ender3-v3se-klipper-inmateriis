@@ -32,6 +32,7 @@ Configuracion productiva para Ender 3 V3 SE con enfoque en operacion diaria:
 3. Sync de carrete activo desde Spoolman a Moonraker/Klipper.
 4. Watchdog: pausa impresion cuando `remaining_g` cae por debajo del umbral.
 5. Macro de destrabe CR/BLTouch integrada: `DESTRABAR_BLTOUCH`.
+6. En ABS, el ventilador de capa queda bloqueado en 0 (se ignora `M106` del slicer).
 
 ## Extrusor CAD y referencia visual
 
