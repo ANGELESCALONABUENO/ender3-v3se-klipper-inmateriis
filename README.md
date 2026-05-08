@@ -101,6 +101,7 @@ Aplica el hotfix documentado (se parchea `prtouch.py` dentro de Klipper en la Ra
 
 - Changelog: `CHANGELOG.md`
 - Guia de contribucion: `CONTRIBUTING.md`
+- Planes futuros inMateriis: `docs/future-plans-inmateriis.md`
 - Plantilla de PR: `.github/pull_request_template.md`
 - Plantillas de issues: `.github/ISSUE_TEMPLATE/`
 - Orca machine g-code recomendado: `docs/orca-machine-gcode.md`

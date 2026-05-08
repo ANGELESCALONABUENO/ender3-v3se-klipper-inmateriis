@@ -10,6 +10,7 @@ The format is based on Keep a Changelog.
 - Docs: guía de hotfix para `PRTOUCH_PROBE_ZOFFSET` cuando `probe_result` es inmutable.
 - Docs: agregado `HOSTS.md` con mapeo de impresoras/hosts (`se01`, `se02`, `ma01`) e IPs Tailscale.
 - Docs: agregada sección de hosts de respaldo por IP directa en `HOSTS.md`.
+- Docs: agregado `docs/future-plans-inmateriis.md` con plan semanal de mejoras (2026-05-08) para SE01, SE02 y MA01.
 
 ### Changed
 - `config/printer.cfg`: sincronizado con se01 (agregado `[firmware_retraction]`, `pressure_advance` a `0.1`).
